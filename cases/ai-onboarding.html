@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://nsbshal-arch.github.io/cases/ai-onboarding.html">
+<meta name="description" content="Адаптация новичков как управляемый процесс: доходимость до работы 1 из 10 → ~5 из 10, самостоятельность за 3 недели на сложном продукте. Плюс слой AI-усиления для масштабирования.">
+<meta property="og:title" content="Адаптация как управляемый процесс — кейс · Надежда Добрынина">
+<meta property="og:description" content="1 из 10 → ~5 из 10, самостоятельность за 3 недели. Как собрать адаптацию в управляемый процесс и усилить её AI.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://nsbshal-arch.github.io/cases/ai-onboarding.html">
+<meta property="og:image" content="https://nsbshal-arch.github.io/assets/og-image.png">
+<meta property="og:site_name" content="Надежда Добрынина">
+<meta name="twitter:card" content="summary_large_image">
+
+<title>Адаптация как управляемый процесс — кейс · Надежда Добрынина</title>
+<link rel="stylesheet" href="../assets/style.css?v=20261119">
+<style>
+  /* ===== draft page, scoped ===== */
+  .dp { background: #f7f5ee; }
+  .dp-ribbon {
+    background: #ff5a36; color: #fff; text-align: center;
+    font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase;
+    padding: 8px 16px; font-weight: 700;
+  }
+  .dp-hero {
+    position: relative; overflow: hidden;
+    background: radial-gradient(120% 120% at 85% 0%, #1d5f4c 0%, #10231e 45%, #0b0d0c 100%);
+    color: #f3f6f2; padding: 76px 0 64px;
+  }
+  .dp-hero::before {
+    content: ""; position: absolute; width: 620px; height: 620px; border-radius: 50%;
+    right: -180px; top: -260px;
+    background: radial-gradient(circle at 40% 40%, rgba(255,90,54,.35), transparent 62%);
+  }
+  .dp-hero::after {
+    content: ""; position: absolute; width: 380px; height: 380px; border-radius: 50%;
+    left: -140px; bottom: -220px;
+    background: radial-gradient(circle at 50% 50%, rgba(56,178,138,.28), transparent 65%);
+  }
+  .dp-hero .wrap { position: relative; z-index: 1; }
+  .dp-eyebrow {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-size: 12px; letter-spacing: .16em; text-transform: uppercase;
+    color: #7fd8b8; font-weight: 700; margin-bottom: 22px;
+  }
+  .dp-eyebrow::before { content: ""; width: 30px; height: 2px; background: #7fd8b8; }
+  .dp-hero h1 {
+    font-size: clamp(34px, 5vw, 62px); line-height: 1.05; letter-spacing: -.025em;
+    max-width: 20ch; color: #fff;
+  }
+  .dp-hero h1 .strike {
+    position: relative; color: #ff8a6b; white-space: nowrap;
+  }
+  .dp-hero h1 .strike::after {
+    content: ""; position: absolute; left: -2%; right: -2%; top: 54%;
+    height: 4px; background: #ff5a36; border-radius: 3px;
+    transform: rotate(-2deg); box-shadow: 0 0 22px rgba(255,90,54,.7);
+  }
+  .dp-hero .dp-lead {
+    margin-top: 26px; font-size: clamp(16px, 1.6vw, 19px); line-height: 1.65;
+    color: rgba(243,246,242,.82); max-width: 62ch;
+  }
+  .dp-hero .dp-lead b { color: #fff; }
+  .dp-hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+  .dp-btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 14px 24px; border-radius: 999px; text-decoration: none;
+    font-size: 15px; font-weight: 650; transition: transform .15s ease, background .15s ease;
+  }
+  .dp-btn:hover { transform: translateY(-2px); }
+  .dp-btn-pop { background: #ff5a36; color: #fff; }
+  .dp-btn-pop:hover { background: #ff7253; color: #fff; }
+  .dp-btn-line { border: 1px solid rgba(255,255,255,.28); color: #fff; }
+  .dp-btn-line:hover { background: rgba(255,255,255,.1); color: #fff; }
+  .dp-hero-facts {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+    margin-top: 46px; border: 1px solid rgba(255,255,255,.16);
+    border-radius: 16px; overflow: hidden; background: rgba(255,255,255,.16);
+  }
+  .dp-hf { background: rgba(9,16,14,.55); padding: 20px 22px; backdrop-filter: blur(4px); }
+  .dp-hf dt { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: rgba(243,246,242,.55); }
+  .dp-hf dd { margin: 8px 0 0; font-family: var(--serif); font-size: 22px; color: #fff; letter-spacing: -.01em; }
+  .dp-hf dd em { font-style: normal; color: #7fd8b8; }
+
+  /* pain */
+  .dp-pain {
+    position: relative; overflow: hidden; color: #fdf3ee;
+    background: linear-gradient(160deg, #2b1310 0%, #3a1a13 55%, #20100d 100%);
+    padding: 80px 0;
+  }
+  .dp-pain::before {
+    content: ""; position: absolute; inset: auto -120px -220px auto;
+    width: 520px; height: 520px; border-radius: 50%;
+    background: radial-gradient(circle at 50% 50%, rgba(255,90,54,.28), transparent 65%);
+  }
+  .dp-pain .wrap { position: relative; z-index: 1; }
+  .dp-pain .dp-eyebrow { color: #ff9a7d; }
+  .dp-pain .dp-eyebrow::before { background: #ff9a7d; }
+  .dp-pain h2 { font-size: clamp(28px, 3.6vw, 44px); line-height: 1.1; color: #fff; max-width: 24ch; }
+  .dp-pain .dp-sub { margin-top: 18px; font-size: 17px; color: rgba(253,243,238,.72); max-width: 58ch; }
+  .dp-pain-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 44px; }
+  .dp-pain-card {
+    border: 1px solid rgba(255,255,255,.14); border-radius: 16px; padding: 24px 22px;
+    background: rgba(255,255,255,.045);
+  }
+  .dp-pain-num { font-family: var(--serif); font-size: 42px; line-height: 1; color: #ff7a55; letter-spacing: -.03em; }
+  .dp-pain-card h3 { font-size: 16.5px; margin: 14px 0 8px; color: #fff; line-height: 1.3; }
+  .dp-pain-card p { margin: 0; font-size: 14px; color: rgba(253,243,238,.62); line-height: 1.55; }
+  .dp-pain-quote {
+    margin-top: 44px; border-left: 3px solid #ff5a36; padding: 6px 0 6px 24px;
+    font-family: var(--serif); font-size: clamp(19px, 2.2vw, 26px); line-height: 1.45; color: #fff;
+    max-width: 34ch;
+  }
+  .dp-pain-quote span { color: #ff9a7d; }
+
+  /* transformation */
+  .dp-turn { padding: 88px 0; }
+  .dp-turn h2 { font-size: clamp(28px, 3.4vw, 42px); line-height: 1.12; max-width: 26ch; }
+  .dp-turn .dp-sub { margin-top: 16px; color: var(--muted); max-width: 60ch; }
+  .dp-ba { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 44px; }
+  .dp-ba-col { border-radius: 20px; padding: 28px; border: 1px solid var(--line); background: #fff; }
+  .dp-ba-col.before { background: linear-gradient(170deg, #fdf0ea, #f8e2d8); border-color: #efd0c2; }
+  .dp-ba-col.after { background: linear-gradient(170deg, #eaf7f0, #d7eee1); border-color: #bfe0cf; }
+  .dp-ba-tag { font-size: 11.5px; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; }
+  .dp-ba-col.before .dp-ba-tag { color: #b34a2c; }
+  .dp-ba-col.after .dp-ba-tag { color: #1d6b52; }
+  .dp-ba-big { font-family: var(--serif); font-size: clamp(52px, 7vw, 84px); line-height: 1; margin-top: 14px; letter-spacing: -.04em; }
+  .dp-ba-col.before .dp-ba-big { color: #c9552f; }
+  .dp-ba-col.after .dp-ba-big { color: #1d6b52; }
+  .dp-ba-col .dp-ba-cap { font-size: 14.5px; color: var(--ink-soft); margin-top: 8px; }
+  .dp-people { display: flex; gap: 8px; margin-top: 22px; flex-wrap: wrap; }
+  .dp-person {
+    width: 34px; height: 34px; border-radius: 50%; position: relative;
+    display: grid; place-items: center; font-size: 14px; font-weight: 700;
+  }
+  .dp-ba-col.before .dp-person.gone { background: #efd3c8; color: #c07a60; }
+  .dp-ba-col.before .dp-person.stay { background: #c9552f; color: #fff; }
+  .dp-ba-col.after .dp-person.gone { background: #cfe4d8; color: #86a899; }
+  .dp-ba-col.after .dp-person.stay { background: #1d6b52; color: #fff; }
+  .dp-person.gone::after { content: ""; position: absolute; left: 8px; right: 8px; top: 50%; height: 2px; background: currentColor; transform: rotate(-45deg); border-radius: 2px; }
+  .dp-ba-foot { margin-top: 12px; font-size: 12.5px; color: var(--muted); }
+
+  /* magic */
+  .dp-magic { padding: 88px 0; background: #0f1513; color: #eef3ef; }
+  .dp-magic .dp-eyebrow { color: #7fd8b8; }
+  .dp-magic .dp-eyebrow::before { background: #7fd8b8; }
+  .dp-magic h2 { font-size: clamp(28px, 3.6vw, 44px); color: #fff; max-width: 26ch; line-height: 1.1; }
+  .dp-magic .dp-sub { margin-top: 16px; color: rgba(238,243,239,.65); max-width: 60ch; }
+  .dp-flow { margin-top: 46px; display: grid; gap: 12px; counter-reset: flow; }
+  .dp-flow-row {
+    display: grid; grid-template-columns: 54px 1fr auto; gap: 20px; align-items: center;
+    border: 1px solid rgba(255,255,255,.12); border-radius: 16px; padding: 20px 24px;
+    background: linear-gradient(100deg, rgba(255,255,255,.05), rgba(255,255,255,.015));
+    transition: border-color .2s ease, transform .2s ease, background .2s ease;
+  }
+  .dp-flow-row:hover { border-color: rgba(127,216,184,.5); transform: translateX(4px); }
+  .dp-flow-row::before {
+    counter-increment: flow; content: "0" counter(flow);
+    font-family: var(--serif); font-size: 15px; color: #7fd8b8; letter-spacing: .06em;
+  }
+  .dp-flow-row h3 { font-size: 17.5px; margin: 0 0 4px; color: #fff; font-family: var(--sans); font-weight: 650; }
+  .dp-flow-row p { margin: 0; font-size: 14px; color: rgba(238,243,239,.62); line-height: 1.5; }
+  .dp-flow-tag { font-size: 11.5px; letter-spacing: .1em; text-transform: uppercase; color: #7fd8b8; white-space: nowrap; }
+
+  /* result */
+  .dp-result { padding: 84px 0; background: linear-gradient(150deg, #1d6b52, #14493a); color: #fff; }
+  .dp-result h2 { font-size: clamp(28px, 3.4vw, 42px); color: #fff; max-width: 24ch; }
+  .dp-result .dp-sub { margin-top: 14px; color: rgba(255,255,255,.72); max-width: 58ch; }
+  .dp-result-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 44px; }
+  .dp-rcard { background: rgba(255,255,255,.09); border: 1px solid rgba(255,255,255,.16); border-radius: 18px; padding: 28px; }
+  .dp-rcard .v { font-family: var(--serif); font-size: clamp(40px, 5vw, 62px); line-height: 1; letter-spacing: -.04em; }
+  .dp-rcard .l { margin-top: 12px; font-size: 14.5px; color: rgba(255,255,255,.78); line-height: 1.5; }
+
+  /* AI system */
+  .dp-sys { padding: 88px 0; }
+  .dp-sys h2 { font-size: clamp(28px, 3.4vw, 42px); max-width: 28ch; line-height: 1.12; }
+  .dp-sys .dp-sub { margin-top: 16px; color: var(--muted); max-width: 62ch; }
+  .dp-sys-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 44px; }
+  .dp-sys-card {
+    border: 1px solid var(--line); border-radius: 18px; background: #fff; padding: 24px;
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  }
+  .dp-sys-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: #b9d8c9; }
+  .dp-sys-card .who { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: #b34a2c; font-weight: 700; }
+  .dp-sys-card h3 { font-size: 18px; margin: 10px 0 12px; line-height: 1.3; }
+  .dp-sys-card .do { font-size: 14.5px; color: var(--ink-soft); margin: 0 0 14px; }
+  .dp-sys-card .eff {
+    border-top: 1px dashed var(--line); padding-top: 12px;
+    font-size: 14px; color: #1d6b52; font-weight: 600;
+  }
+  .dp-sys-card .eff span { color: var(--muted); font-weight: 400; }
+
+  /* value */
+  .dp-value { padding: 0 0 88px; }
+  .dp-value-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-top: 32px; }
+  .dp-value-item { border: 1px solid var(--line); border-radius: 14px; padding: 18px; background: #fff; }
+  .dp-value-item b { display: block; font-family: var(--serif); font-size: 17px; margin-bottom: 6px; color: var(--accent); }
+  .dp-value-item span { font-size: 13.5px; color: var(--muted); line-height: 1.45; }
+
+  /* cta */
+  .dp-cta { padding: 0 0 88px; }
+  .dp-cta-card {
+    background: #0f1513; color: #fff; border-radius: 26px; padding: 52px;
+    display: grid; grid-template-columns: 1.15fr .85fr; gap: 40px; align-items: center;
+    position: relative; overflow: hidden;
+  }
+  .dp-cta-card::before {
+    content: ""; position: absolute; width: 420px; height: 420px; border-radius: 50%;
+    right: -140px; top: -180px;
+    background: radial-gradient(circle at 50% 50%, rgba(255,90,54,.3), transparent 62%);
+  }
+  .dp-cta-card h2 { color: #fff; font-size: clamp(26px, 3vw, 38px); line-height: 1.15; max-width: 22ch; }
+  .dp-cta-card p { color: rgba(255,255,255,.72); margin: 14px 0 0; max-width: 46ch; }
+  .dp-cta-links { display: grid; gap: 12px; position: relative; z-index: 1; }
+  .dp-cta-link {
+    display: flex; justify-content: space-between; gap: 16px; align-items: center;
+    border: 1px solid rgba(255,255,255,.18); border-radius: 12px; padding: 14px 18px;
+    color: #fff; text-decoration: none; font-size: 14.5px;
+  }
+  .dp-cta-link:hover { background: rgba(255,255,255,.08); color: #fff; }
+  .dp-cta-link span:last-child { color: rgba(255,255,255,.5); font-size: 13px; }
+
+  /* review */
+  .dp-review { padding: 0 0 96px; }
+  .dp-review-box { background: #fff; border: 1px dashed var(--line); border-radius: 18px; padding: 30px 32px; }
+  .dp-review-box h2 { font-size: 20px; margin-bottom: 14px; }
+  .dp-review-box ol { margin: 0; padding-left: 20px; color: var(--ink-soft); font-size: 14.5px; }
+  .dp-review-box li { margin-bottom: 9px; }
+
+  @media (max-width: 980px) {
+    .dp-hero-facts, .dp-pain-grid, .dp-value-grid { grid-template-columns: repeat(2, 1fr); }
+    .dp-ba, .dp-sys-grid, .dp-cta-card { grid-template-columns: 1fr; }
+    .dp-result-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) {
+    .dp-flow-row { grid-template-columns: 40px 1fr; }
+    .dp-flow-tag { display: none; }
+    .dp-cta-card { padding: 32px 24px; }
+    .dp-ba-col { padding: 22px; }
+  }
+  @media (prefers-reduced-motion: reduce) { .dp-flow-row, .dp-sys-card { transition: none; } }
+</style>
+</head>
+<body class="dp">
+<a class="skip" href="#main">Перейти к содержанию</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-inner">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">НД</span>
+      <span class="brand-text">
+        <span class="brand-name">Надежда Добрынина</span>
+        <span class="brand-role">T&amp;D · внутренние коммуникации · управленческий консалтинг</span>
+      </span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Меню" aria-expanded="false">Меню</button>
+    <nav class="nav" id="nav">
+      <a href="../index.html#manifest">Манифест</a>
+      <div class="nav-item has-dropdown">
+        <button type="button" class="nav-parent" aria-haspopup="true" aria-expanded="false">Направления <span class="nav-caret" aria-hidden="true">▾</span></button>
+        <div class="nav-dropdown">
+          <a href="../index.html#expertise">Внутренние коммуникации</a>
+          <a href="../learning.html">Обучение и развитие</a>
+          <a href="../culture.html">Культура</a>
+          <a href="../index.html#expertise">Управленческий консалтинг</a>
+        </div>
+      </div>
+      <a href="../cases.html">Кейсы</a>
+      <a href="../method.html#library">Библиотека</a>
+      <a href="../method.html#meaning">События</a>
+      <a href="../method.html#products">Продукты</a>
+      <a href="../method.html#speaking">Сцена</a>
+      <a href="../index.html#formats">Форматы</a>
+      <a href="../index.html#reviews">Отзывы</a>
+      <a class="nav-cta" href="../index.html#contact">Связаться</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="wrap"><p style="padding-top:20px"><a class="back-link" href="../cases.html">← Все кейсы</a></p></div>
+
+  <section class="dp-hero">
+    <div class="wrap">
+      <div class="dp-eyebrow">Адаптация · управляемый процесс</div>
+      <h1>Из десяти новичков до работы доходил <span class="strike">один</span>.</h1>
+      <p class="dp-lead">
+        Это не про «плохих людей» и не про «слабый HR». Это про отсутствие процесса:
+        нет маршрута, нет опоры рядом, нет обратной связи в первые недели. Я собрала этот процесс —
+        и <b>доходимость выросла с 1 из 10 до ~5 из 10, самостоятельность — за 3 недели</b>
+        даже на сложном продукте.
+      </p>
+      <div class="dp-hero-actions">
+        <a class="dp-btn dp-btn-pop" href="#pain">Показать, где теряются люди →</a>
+        <a class="dp-btn dp-btn-line" href="#system">Как это масштабируется</a>
+      </div>
+      <dl class="dp-hero-facts">
+        <div class="dp-hf"><dt>Доходимость</dt><dd><em>1 → 5</em> из 10</dd></div>
+        <div class="dp-hf"><dt>Самостоятельность</dt><dd>~3 недели</dd></div>
+        <div class="dp-hf"><dt>Контур</dt><dd>отдел продаж</dd></div>
+        <div class="dp-hf"><dt>Опыт масштаба</dt><dd>1000+ человек</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="dp-pain" id="pain">
+    <div class="wrap">
+      <div class="dp-eyebrow">Боль</div>
+      <h2>Каждый ушедший новичок — это уже оплаченные деньги, которые выбросили</h2>
+      <p class="dp-sub">
+        Подбор, оформление, обучение, время наставника — всё это потрачено. А потом человек уходит
+        в первые недели, и цикл начинается заново. Бизнес видит только «текучку», а не её цену.
+      </p>
+      <div class="dp-pain-grid">
+        <div class="dp-pain-card">
+          <div class="dp-pain-num">9 из 10</div>
+          <h3>не доходили до реальной работы</h3>
+          <p>Вместо адаптации — бесконечные собеседования и «стажировки» на 1–2 дня без сопровождения.</p>
+        </div>
+        <div class="dp-pain-card">
+          <div class="dp-pain-num">0</div>
+          <h3>прозрачности: кто где застрял</h3>
+          <p>Нет маршрута и статусов. Проблема всплывает, когда человек уже написал заявление.</p>
+        </div>
+        <div class="dp-pain-card">
+          <div class="dp-pain-num">∞</div>
+          <h3>часов наставника в пустоту</h3>
+          <p>Повторяющиеся вопросы, ручные инструкции, хаотичное введение в должность — снова и снова.</p>
+        </div>
+        <div class="dp-pain-card">
+          <div class="dp-pain-num">1→0</div>
+          <h3>сигналов до ухода</h3>
+          <p>Обратная связь собирается нерегулярно и «тонет». Решения принимаются на ощущениях.</p>
+        </div>
+      </div>
+      <blockquote class="dp-pain-quote">
+        Проблема была не в людях. <span>Не было системы</span>, в которую человек попадает с первого дня.
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="dp-turn">
+    <div class="wrap">
+      <div class="eyebrow">Что изменилось</div>
+      <h2>Один и тот же найм. Разница — в процессе.</h2>
+      <p class="dp-sub">Не «мотивация» и не «культура на словах», а конкретные действия: маршрут, человек рядом и обратная связь по ходу работы.</p>
+      <div class="dp-ba">
+        <div class="dp-ba-col before">
+          <div class="dp-ba-tag">До</div>
+          <div class="dp-ba-big">10%</div>
+          <div class="dp-ba-cap">доходили до реальной работы</div>
+          <div class="dp-people">
+            <span class="dp-person stay">✓</span><span class="dp-person gone">✕</span><span class="dp-person gone">✕</span>
+            <span class="dp-person gone">✕</span><span class="dp-person gone">✕</span><span class="dp-person gone">✕</span>
+            <span class="dp-person gone">✕</span><span class="dp-person gone">✕</span><span class="dp-person gone">✕</span>
+            <span class="dp-person gone">✕</span>
+          </div>
+          <div class="dp-ba-foot">1 из 10 · стажировка на пару дней · «смотри со стороны»</div>
+        </div>
+        <div class="dp-ba-col after">
+          <div class="dp-ba-tag">После</div>
+          <div class="dp-ba-big">50%</div>
+          <div class="dp-ba-cap">доходили до реальной работы</div>
+          <div class="dp-people">
+            <span class="dp-person stay">✓</span><span class="dp-person stay">✓</span><span class="dp-person stay">✓</span>
+            <span class="dp-person stay">✓</span><span class="dp-person stay">✓</span><span class="dp-person gone">✕</span>
+            <span class="dp-person gone">✕</span><span class="dp-person gone">✕</span><span class="dp-person gone">✕</span>
+            <span class="dp-person gone">✕</span>
+          </div>
+          <div class="dp-ba-foot">~5 из 10 · наставник в графике · самостоятельность за 3 недели</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dp-magic">
+    <div class="wrap">
+      <div class="dp-eyebrow">Механика</div>
+      <h2>«Магия» — это пять шагов, которые можно повторить</h2>
+      <p class="dp-sub">Ничего волшебного: диагностика, маршрут, живое сопровождение, обратная связь и опоры, которые не держатся на одном герое.</p>
+      <div class="dp-flow">
+        <div class="dp-flow-row">
+          <div>
+            <h3>Нашли точку провала</h3>
+            <p>Разобрали, на каком шаге и почему новичок теряется: нет контакта для вопросов, нет понятной последовательности, ОС нерегулярна.</p>
+          </div>
+          <div class="dp-flow-tag">диагностика</div>
+        </div>
+        <div class="dp-flow-row">
+          <div>
+            <h3>Собрали маршрут по этапам</h3>
+            <p>От первого дня до самостоятельности: что человек должен знать и уметь на каждом шаге и по каким критериям идём дальше.</p>
+          </div>
+          <div class="dp-flow-tag">маршрут</div>
+        </div>
+        <div class="dp-flow-row">
+          <div>
+            <h3>Наставник — в графике новичка</h3>
+            <p>Не «наблюдай со стороны», а работа вместе: вопрос можно задать в моменте, практика идёт на реальных задачах.</p>
+          </div>
+          <div class="dp-flow-tag">сопровождение</div>
+        </div>
+        <div class="dp-flow-row">
+          <div>
+            <h3>Обратная связь по ходу работы</h3>
+            <p>Короткие развивающие петли: что получается, где нужна поддержка, какой следующий шаг. Без «раз в квартал».</p>
+          </div>
+          <div class="dp-flow-tag">ОС</div>
+        </div>
+        <div class="dp-flow-row">
+          <div>
+            <h3>Опоры, а не героизм</h3>
+            <p>Структура сопровождения, этапы и фиксация прогресса — чтобы результат не зависел от удачного совпадения людей.</p>
+          </div>
+          <div class="dp-flow-tag">система</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dp-result">
+    <div class="wrap">
+      <h2>Что получил бизнес</h2>
+      <p class="dp-sub">Не «стало приятнее работать», а измеримый сдвиг в деньгах и времени.</p>
+      <div class="dp-result-grid">
+        <div class="dp-rcard">
+          <div class="v">1 → 5</div>
+          <div class="l">из 10 новичков доходят до реальной работы вместо 1 из 10</div>
+        </div>
+        <div class="dp-rcard">
+          <div class="v">3 нед.</div>
+          <div class="l">до самостоятельности — даже на сложном продукте с сезонностью и широким ассортиментом</div>
+        </div>
+        <div class="dp-rcard">
+          <div class="v">1000+</div>
+          <div class="l">контур, где практика адаптации уже выстраивалась — значит, подход переносится</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dp-sys" id="system">
+    <div class="wrap">
+      <div class="eyebrow">Масштабирование · AI-усиление</div>
+      <h2>Чтобы это не держалось на одном наставнике</h2>
+      <p class="dp-sub">
+        Проектируемое решение: процесс усиливается автоматизацией и AI. Рутина уходит системе —
+        людям остаются сложные кейсы и развитие.
+      </p>
+      <div class="dp-sys-grid">
+        <div class="dp-sys-card">
+          <div class="who">Узкое место</div>
+          <h3>Повторяющиеся вопросы и ручные инструкции</h3>
+          <p class="do">База знаний + ассистент для новичка: FAQ, «что делать сейчас», подсказки по регламентам.</p>
+          <div class="eff">Эффект: <span>наставник тратит время на сложное, а не на повторы; единый стандарт ответов.</span></div>
+        </div>
+        <div class="dp-sys-card">
+          <div class="who">Узкое место</div>
+          <h3>Welcome-материалы под роль готовятся долго</h3>
+          <p class="do">Генерация и адаптация welcome-пакетов, гайдов и чек-листов под роль и подразделение из шаблонов.</p>
+          <div class="eff">Эффект: <span>быстрый запуск новых ролей, меньше ручной рутины HR.</span></div>
+        </div>
+        <div class="dp-sys-card">
+          <div class="who">Узкое место</div>
+          <h3>Непонятно, кто где «застрял»</h3>
+          <p class="do">Трек адаптации с этапами, владельцами, сроками и статусами — в одном дашборде.</p>
+          <div class="eff">Эффект: <span>риски срыва видны до того, как человек ушёл.</span></div>
+        </div>
+        <div class="dp-sys-card">
+          <div class="who">Узкое место</div>
+          <h3>Обратная связь «тонет»</h3>
+          <p class="do">Короткие пульс-опросы + структурирование ответов и интервью в сводку по темам и рискам.</p>
+          <div class="eff">Эффект: <span>ранние сигналы и решения на данных, а не на ощущениях.</span></div>
+        </div>
+        <div class="dp-sys-card">
+          <div class="who">Узкое место</div>
+          <h3>Знания наставников не накапливаются</h3>
+          <p class="do">Фиксация типовых ситуаций и улучшений в обновляемые материалы и скрипты.</p>
+          <div class="eff">Эффект: <span>процесс улучшается от потока к потоку, меньше зависимости от конкретных людей.</span></div>
+        </div>
+        <div class="dp-sys-card">
+          <div class="who">Метрики</div>
+          <h3>Как мерить эффект</h3>
+          <p class="do">Доходимость до конца испытательного, time-to-productivity, часы наставника на новичка, ясность ожиданий, доля вовремя снятых рисков.</p>
+          <div class="eff">Эффект: <span>разговор с бизнесом на языке цифр.</span></div>
+        </div>
+      </div>
+      <div class="callout warm" style="margin-top:28px">
+        <b>Важно.</b> Блок AI-усиления — проектируемое решение для масштабирования. Он не утверждает,
+        что эти инструменты уже использовались в исходном кейсе.
+      </div>
+    </div>
+  </section>
+
+  <section class="dp-value">
+    <div class="wrap">
+      <div class="eyebrow">Ценность</div>
+      <h2 style="font-size:clamp(26px,3.2vw,38px)">Что покупает бизнес</h2>
+      <div class="dp-value-grid">
+        <div class="dp-value-item"><b>Скорость</b><span>быстрее выход на самостоятельность и вклад в результат</span></div>
+        <div class="dp-value-item"><b>Удержание</b><span>меньше потерь на старте: маршрут, поддержка, ранние сигналы</span></div>
+        <div class="dp-value-item"><b>Масштаб</b><span>стандарт, который не ломается при росте найма</span></div>
+        <div class="dp-value-item"><b>Эффективность</b><span>рутина — системе, людям — сложные ситуации</span></div>
+        <div class="dp-value-item"><b>Управляемость</b><span>этапы и метрики вместо «ощущений»</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dp-cta">
+    <div class="wrap">
+      <div class="dp-cta-card">
+        <div>
+          <h2>Хотите так же — но под свой найм?</h2>
+          <p>Покажу маршрут, который собрала, и как он ляжет на ваш поток: с чего начать, что даст быстрый эффект, где нужна автоматизация.</p>
+        </div>
+        <div class="dp-cta-links">
+          <a class="dp-cta-link" href="mailto:nsbshal@gmail.com"><span>Почта</span><span>nsbshal@gmail.com</span></a>
+          <a class="dp-cta-link" href="https://t.me/vestnik_adekvatnosti" target="_blank" rel="noopener"><span>Telegram</span><span>@vestnik_adekvatnosti ↗</span></a>
+          <a class="dp-cta-link" href="tel:+79221376431"><span>Телефон</span><span>+7 (922) 137-64-31</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark">НД</span>
+      <span>© 2026 Надежда Добрынина</span>
+    </div>
+    <p class="footer-note">Все кейсы — демонстрация подхода. Названия компаний, имена, данные и&nbsp;цифры изменены. Материалы не&nbsp;содержат конфиденциальной информации и&nbsp;документов под NDA.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var header = document.getElementById('siteHeader');
+  var toggle = document.getElementById('navToggle');
+  var nav = document.getElementById('nav');
+  function onScroll() {
+    if (window.scrollY > 8) header.classList.add('is-scrolled');
+    else header.classList.remove('is-scrolled');
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+  if (toggle && nav) {
+    toggle.addEventListener('click', function () {
+      nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', nav.classList.contains('is-open') ? 'true' : 'false');
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
