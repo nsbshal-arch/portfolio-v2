@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://nsbshal-arch.github.io/cases/demo-onboarding.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="../favicon-16.png" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<title>Демо-макет: адаптация с AI · Надежда Добрынина</title>
+<meta name="description" content="Кликабельный демо-макет: AI-ассистент новичка и трек адаптации. Показывает, как может выглядеть процесс, а не как он уже внедрён.">
+<meta name="robots" content="noindex, follow">
+<link rel="stylesheet" href="../assets/style.css?v=20261119">
+<style>
+.demo-tabs { display: flex; gap: 8px; margin: 26px 0 22px; flex-wrap: wrap; }
+.demo-tab { border: 1px solid var(--line); background: #fff; border-radius: 999px; padding: 10px 18px; font: inherit; cursor: pointer; color: var(--ink-soft); }
+.demo-tab.is-active { background: var(--ink); color: #fff; border-color: var(--ink); }
+.demo-panel[hidden] { display: none; }
+.demo-sum { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 0 0 24px; }
+.demo-sum div { border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; background: #fff; }
+.demo-sum b { display: block; font-family: var(--serif); font-size: 28px; line-height: 1.1; }
+.demo-sum span { font-size: 13px; color: var(--muted); }
+.chat { border: 1px solid var(--line); border-radius: 20px; background: #fff; padding: 20px; }
+.chat-log { display: flex; flex-direction: column; gap: 10px; min-height: 300px; max-height: 430px; overflow-y: auto; padding-right: 4px; }
+.msg { max-width: 80%; padding: 12px 16px; border-radius: 16px; font-size: 14.5px; line-height: 1.5; }
+.msg.user { align-self: flex-end; background: var(--accent); color: #fff; border-bottom-right-radius: 4px; }
+.msg.bot { align-self: flex-start; background: var(--paper); color: var(--ink-soft); border: 1px solid var(--line); border-bottom-left-radius: 4px; }
+.msg.bot b { color: var(--ink); }
+.chat-quick { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.chat-quick button { border: 1px solid var(--line); background: #fff; border-radius: 999px; padding: 8px 14px; font: inherit; font-size: 13.5px; cursor: pointer; color: var(--ink-soft); }
+.chat-quick button:hover { border-color: var(--accent); color: var(--ink); }
+.track-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 18px; background: #fff; }
+.track { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 14px; min-width: 720px; }
+.track th, .track td { text-align: left; padding: 13px 15px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+.track th { font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; background: var(--paper); }
+.track tr:last-child td { border-bottom: 0; }
+.track .name { font-weight: 600; color: var(--ink); }
+.status { display: inline-block; padding: 4px 10px; border-radius: 999px; font-size: 12.5px; }
+.status.ok { background: #e8f1ec; color: #1d6b52; }
+.status.attn { background: #fdf0e6; color: #a85a2a; }
+.status.risk { background: #fbe9e4; color: #b34a2c; }
+.demo-note { margin-top: 18px; font-size: 13.5px; color: var(--muted); }
+@media (max-width: 720px) { .demo-sum { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Перейти к содержанию</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-inner">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">НД</span>
+      <span class="brand-text">
+        <span class="brand-name">Надежда Добрынина</span>
+        <span class="brand-role">T&amp;D · внутренние коммуникации · управленческий консалтинг</span>
+      </span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Меню" aria-expanded="false">Меню</button>
+    <nav class="nav" id="nav">
+      <a href="../index.html#manifest">Манифест</a>
+      <div class="nav-item has-dropdown">
+        <button type="button" class="nav-parent" aria-haspopup="true" aria-expanded="false">Направления <span class="nav-caret" aria-hidden="true">▾</span></button>
+        <div class="nav-dropdown">
+          <a href="../index.html#expertise">Внутренние коммуникации</a>
+          <a href="../learning.html">Обучение и развитие</a>
+          <a href="../culture.html">Культура</a>
+          <a href="../index.html#expertise">Управленческий консалтинг</a>
+        </div>
+      </div>
+      <a href="../cases.html">Кейсы</a>
+      <a href="../method.html#library">Библиотека</a>
+      <a href="../method.html#meaning">События</a>
+      <a href="../method.html#products">Продукты</a>
+      <a href="../method.html#speaking">Сцена</a>
+      <a href="../index.html#formats">Форматы</a>
+      <a href="../index.html#reviews">Отзывы</a>
+      <a class="nav-cta" href="../index.html#contact">Связаться</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <div class="wrap"><p style="padding-top:20px"><a class="back-link" href="ai-onboarding.html">← К кейсу адаптации</a></p></div>
+
+  <section class="case-hero">
+    <div class="wrap">
+      <div class="eyebrow">Демо-макет · данные вымышленные</div>
+      <h1>Адаптация с AI: как это может выглядеть</h1>
+      <p class="case-lead">Кликабельный макет, а не работающий продукт. Он показывает, что стоит за блоком «AI-усиление»: ассистент для новичка и прозрачный трек адаптации.</p>
+      <div class="callout warm" style="margin-top:24px"><b>Это демо.</b> Имена, роли и цифры вымышлены. Макет показывает проектируемую логику, а не уже внедрённую систему.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="demo-tabs" role="tablist">
+        <button class="demo-tab is-active" data-tab="assistant" role="tab" aria-selected="true">Ассистент новичка</button>
+        <button class="demo-tab" data-tab="track" role="tab" aria-selected="false">Трек адаптации</button>
+      </div>
+
+      <div class="demo-panel" id="panel-assistant">
+        <div class="chat">
+          <div class="chat-log" id="chatLog">
+            <div class="msg bot">Привет! Я ассистент по адаптации. Помогу разобраться, что делать сейчас — без «спроси у всех подряд». Выбери вопрос ниже или напиши свой.</div>
+          </div>
+          <div class="chat-quick" id="quick">
+            <button data-q="day1">Что делать в первый день?</button>
+            <button data-q="whom">Кому задать вопрос?</button>
+            <button data-q="access">Где взять доступы?</button>
+            <button data-q="behind">Я не успеваю по плану</button>
+          </div>
+        </div>
+        <p class="demo-note">Ответы — заготовленный сценарий демо, без подключения к реальной базе знаний.</p>
+      </div>
+
+      <div class="demo-panel" id="panel-track" hidden>
+        <div class="demo-sum">
+          <div><b>6</b><span>новичков в треке</span></div>
+          <div><b>2</b><span>нужна поддержка</span></div>
+          <div><b>1</b><span>ранний риск</span></div>
+        </div>
+        <div class="track-wrap">
+          <table class="track">
+            <thead><tr><th>Новичок</th><th>Роль</th><th>Этап</th><th>Наставник</th><th>День</th><th>Статус</th><th>Сигнал</th></tr></thead>
+            <tbody>
+              <tr><td class="name">Аня К.</td><td>Менеджер по продажам</td><td>2/5 · первые задачи</td><td>Марина</td><td>5 / 21</td><td><span class="status ok">В норме</span></td><td>—</td></tr>
+              <tr><td class="name">Илья П.</td><td>Оператор</td><td>1/5 · первый день</td><td>Олег</td><td>1 / 21</td><td><span class="status ok">В норме</span></td><td>—</td></tr>
+              <tr><td class="name">Марина С.</td><td>Менеджер по продажам</td><td>3/5 · самостоятельные задачи</td><td>Дина</td><td>12 / 21</td><td><span class="status attn">Нужна поддержка</span></td><td>много вопросов по CRM</td></tr>
+              <tr><td class="name">Тимур А.</td><td>Оператор</td><td>2/5 · первые задачи</td><td>Олег</td><td>9 / 21</td><td><span class="status attn">Нужна поддержка</span></td><td>пропущена встреча с наставником</td></tr>
+              <tr><td class="name">Лена В.</td><td>Менеджер по продажам</td><td>4/5 · выход на план</td><td>Марина</td><td>17 / 21</td><td><span class="status ok">В норме</span></td><td>—</td></tr>
+              <tr><td class="name">Олег Д.</td><td>Оператор</td><td>1/5 · первый день</td><td>Дина</td><td>3 / 21</td><td><span class="status risk">Риск</span></td><td>нет доступа к CRM</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="demo-note">Сигналы мягкие: они предлагают поддержку, а не «штрафуют» за отставание.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+(function () {
+  var tabs = document.querySelectorAll(".demo-tab");
+  tabs.forEach(function (t) {
+    t.addEventListener("click", function () {
+      tabs.forEach(function (x) { x.classList.remove("is-active"); x.setAttribute("aria-selected", "false"); });
+      t.classList.add("is-active"); t.setAttribute("aria-selected", "true");
+      document.querySelectorAll(".demo-panel").forEach(function (p) { p.hidden = true; });
+      document.getElementById("panel-" + t.dataset.tab).hidden = false;
+    });
+  });
+  var answers = {
+    day1: "Первый день: <b>1)</b> получи доступы и ноутбук у IT, <b>2)</b> пройди короткий тур по базе знаний (15 минут), <b>3)</b> созвон с наставником Мариной в 11:00 — она покажет маршрут на неделю. Не нужно знать всё сразу: первые дни — про людей и контекст.",
+    whom: "Твой наставник — <b>Марина</b> (Slack @marina). По продукту — Аня из соседней команды. По доступам и оргвопросам — канал <b>#help</b>. Если срочно, а наставник занят — напиши в <b>#новички</b>, там отвечают быстро.",
+    access: "Доступы к CRM и базе знаний приходят на рабочую почту в первый день. Если через 2 часа их нет — напиши в <b>#help</b> с темой «доступы новичок». Пароли не пересылай в чат: только через защищённое хранилище.",
+    behind: "Выбиваться из плана в первую неделю — нормально. Отметь в треке <b>«нужна поддержка»</b>, и наставник предложит, что можно снять или перенести. Цель — не успеть всё, а понять, где нужна помощь."
+  };
+  var log = document.getElementById("chatLog");
+  function add(text, who) {
+    var d = document.createElement("div");
+    d.className = "msg " + who; d.innerHTML = text; log.appendChild(d); log.scrollTop = log.scrollHeight;
+  }
+  document.getElementById("quick").addEventListener("click", function (e) {
+    var b = e.target.closest("button"); if (!b) return;
+    var q = answers[b.dataset.q]; if (!q) return;
+    add(b.textContent, "user");
+    setTimeout(function () { add(q, "bot"); }, 350);
+  });
+})();
+</script>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark">НД</span>
+      <span>© 2026 Надежда Добрынина</span>
+    </div>
+    <p class="footer-note">Все кейсы — демонстрация подхода. Названия компаний, имена, данные и&nbsp;цифры изменены. Материалы не&nbsp;содержат конфиденциальной информации и&nbsp;документов под NDA.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var header = document.getElementById('siteHeader');
+  var toggle = document.getElementById('navToggle');
+  var nav = document.getElementById('nav');
+  function onScroll() {
+    if (window.scrollY > 8) header.classList.add('is-scrolled');
+    else header.classList.remove('is-scrolled');
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+  if (toggle && nav) {
+    toggle.addEventListener('click', function () {
+      nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', nav.classList.contains('is-open') ? 'true' : 'false');
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
