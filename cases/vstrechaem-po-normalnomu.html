@@ -2,42 +2,115 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
-<link rel="canonical" href="https://nsbshal-arch.github.io/cases/vstrechaem-po-normalnomu.html">
+<link rel="canonical" href="https://nsbshal-arch.github.io/portfolio-v2/cases/vstrechaem-po-normalnomu.html">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="../favicon-16.png" sizes="16x16" type="image/png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <title>Встречаем по-нормальному — кейс · Надежда Добрынина</title>
-<meta name="description" content="Все бьются за приём сотрудника — и никто за возвращение. Кейс о том, как встретить вернувшегося после декрета так, чтобы он остался: сценарий из 6 этапов, чек-лист наставника и расчёт экономики.">
+<meta name="description" content="Все бьются за приём сотрудника — и никто за возвращение. Кейс о том, как встретить вернувшегося после декрета: 6 этапов, чек-лист наставника, расчёт экономики. Без новых затрат — с новой ответственностью.">
 <meta property="og:title" content="Встречаем по-нормальному — кейс · Надежда Добрынина">
 <meta property="og:description" content="Приём — не финиш, а вход в здание. Как встретить вернувшегося сотрудника так, чтобы он остался и работал лучше новичка.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://nsbshal-arch.github.io/cases/vstrechaem-po-normalnomu.html">
-<meta property="og:image" content="https://nsbshal-arch.github.io/assets/og-image.png">
+<meta property="og:url" content="https://nsbshal-arch.github.io/portfolio-v2/cases/vstrechaem-po-normalnomu.html">
+<meta property="og:image" content="https://nsbshal-arch.github.io/portfolio-v2/assets/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:site_name" content="Надежда Добрынина">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://nsbshal-arch.github.io/assets/og-image.png">
+<meta name="twitter:image" content="https://nsbshal-arch.github.io/portfolio-v2/assets/og-image.png">
 <link rel="stylesheet" href="../assets/style.css?v=20261119">
 <style>
-.vn-steps { display: grid; gap: 12px; margin: 24px 0; }
-.vn-step { display: grid; grid-template-columns: 44px 1fr; gap: 16px; border: 1px solid var(--line); border-radius: 16px; background: #fff; padding: 18px 20px; }
-.vn-step .n { font-family: var(--serif); font-size: 20px; color: var(--accent); padding-top: 2px; }
-.vn-step h4 { margin: 0 0 6px; font-size: 16.5px; }
-.vn-step p { margin: 0; font-size: 14.5px; color: var(--ink-soft); }
-.vn-quote { border-left: 3px solid var(--accent); padding: 4px 0 4px 18px; margin: 22px 0; font-family: var(--serif); font-size: 19px; line-height: 1.5; color: var(--ink); }
-.vn-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14.5px; }
-.vn-table th, .vn-table td { text-align: left; padding: 11px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
-.vn-table th { font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); background: var(--paper); }
-.vn-check { list-style: none; padding: 0; margin: 12px 0 24px; }
-.vn-check li { position: relative; padding-left: 26px; margin-bottom: 9px; font-size: 14.5px; color: var(--ink-soft); }
-.vn-check li::before { content: "☐"; position: absolute; left: 0; color: var(--accent); font-size: 15px; }
-@media (max-width: 640px) { .vn-step { grid-template-columns: 1fr; gap: 6px; } }
+  .vn { --vn-green: #13503f; --vn-green-soft: #d9ebe2; --vn-pop: #e8502e; --vn-pop-soft: #ffe7df; --vn-gold: #b8893b; }
+  .vn-hero { padding: 56px 0 40px; }
+  .vn-hero .wrap { max-width: 980px; }
+  .vn-eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; color: var(--vn-pop); }
+  .vn-eyebrow::before { content: ""; width: 28px; height: 2px; background: var(--vn-pop); }
+  .vn-hero h1 { font-family: var(--display); font-size: clamp(36px, 5.4vw, 62px); line-height: 1.03; letter-spacing: -.035em; margin: 20px 0 0; max-width: 21ch; }
+  .vn-hero .vn-lead { margin-top: 22px; font-size: 19px; line-height: 1.6; color: var(--ink-soft); max-width: 56ch; }
+  .vn-hero .vn-lead b { color: var(--ink); }
+  .vn-facts { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 38px; border: 1px solid var(--line); border-radius: 18px; overflow: hidden; background: #fff; }
+  .vn-fact { padding: 22px 24px; border-right: 1px solid var(--line); }
+  .vn-fact:last-child { border-right: 0; }
+  .vn-fact b { display: block; font-family: var(--display); font-weight: 800; font-size: clamp(30px, 3.4vw, 44px); line-height: .95; letter-spacing: -.04em; color: var(--vn-green); }
+  .vn-fact.hot b { color: var(--vn-pop); }
+  .vn-fact span { display: block; margin-top: 10px; font-size: 13px; line-height: 1.4; color: var(--muted); }
+
+  .vn-body { max-width: 980px; margin: 0 auto; }
+  .vn-body p { font-size: 17px; line-height: 1.7; color: var(--ink-soft); margin: 0 0 16px; }
+  .vn-body h2 { font-family: var(--display); font-size: clamp(24px, 2.6vw, 32px); line-height: 1.15; letter-spacing: -.02em; margin: 56px 0 18px; }
+  .vn-body h3 { font-size: 18px; margin: 28px 0 10px; }
+  .vn-body strong { color: var(--ink); }
+
+  .vn-band { background: var(--vn-pop-soft); border-radius: 22px; padding: 30px 34px; margin: 40px 0; }
+  .vn-band .vn-eyebrow { color: var(--vn-pop); }
+  .vn-band h2 { margin: 12px 0 12px; }
+  .vn-band p { margin-bottom: 12px; }
+  .vn-band p:last-child { margin-bottom: 0; }
+
+  .vn-observe { border-left: 4px solid var(--vn-gold); background: #fffdf7; border-radius: 0 16px 16px 0; padding: 24px 28px; margin: 32px 0; }
+  .vn-observe .lbl { font-size: 11.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--vn-gold); font-weight: 700; }
+  .vn-observe p { font-family: var(--serif); font-size: 18px; line-height: 1.6; color: var(--ink); margin: 10px 0 0; }
+
+  .vn-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 26px 0; }
+  .vn-card { border: 1px solid var(--line); border-radius: 18px; background: #fff; padding: 24px; }
+  .vn-card.bad { border-top: 3px solid var(--vn-pop); }
+  .vn-card.good { border-top: 3px solid var(--vn-green); }
+  .vn-card .tag { font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase; font-weight: 700; }
+  .vn-card.bad .tag { color: var(--vn-pop); }
+  .vn-card.good .tag { color: var(--vn-green); }
+  .vn-card h4 { margin: 10px 0 12px; font-size: 17px; }
+  .vn-card ul { margin: 0; padding-left: 18px; font-size: 15px; color: var(--ink-soft); }
+  .vn-card li { margin-bottom: 8px; }
+
+  .vn-steps { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 26px 0; }
+  .vn-step { position: relative; border: 1px solid var(--line); border-radius: 18px; background: #fff; padding: 22px 24px 22px 24px; }
+  .vn-step .n { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--vn-green-soft); color: var(--vn-green); font-family: var(--display); font-weight: 800; font-size: 16px; margin-bottom: 12px; }
+  .vn-step h4 { margin: 0 0 7px; font-size: 16.5px; }
+  .vn-step p { margin: 0; font-size: 14.5px; line-height: 1.55; }
+  .vn-step:last-child:nth-child(odd) { grid-column: 1 / -1; }
+
+  .vn-table { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 15px; background: #fff; border-radius: 16px; overflow: hidden; border: 1px solid var(--line); }
+  .vn-table th, .vn-table td { text-align: left; padding: 13px 16px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .vn-table th { font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--vn-green); background: var(--vn-green-soft); font-weight: 700; }
+  .vn-table tr:last-child td { border-bottom: 0; }
+
+  .vn-money { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 26px 0; }
+  .vn-money .box { border-radius: 18px; padding: 24px; background: var(--paper-2); }
+  .vn-money .box.win { background: var(--vn-green); color: #fff; }
+  .vn-money .cap { font-size: 12px; letter-spacing: .1em; text-transform: uppercase; font-weight: 700; opacity: .75; }
+  .vn-money .sum { font-family: var(--display); font-weight: 800; font-size: clamp(28px, 3vw, 40px); letter-spacing: -.03em; line-height: 1.1; margin-top: 8px; }
+  .vn-money .note { font-size: 13.5px; margin-top: 6px; opacity: .8; }
+  .vn-result { background: var(--vn-pop-soft); border-radius: 18px; padding: 26px 28px; margin: 26px 0; }
+  .vn-result .big { font-family: var(--display); font-weight: 800; font-size: clamp(30px, 3.6vw, 46px); letter-spacing: -.035em; color: var(--vn-pop); line-height: 1.05; }
+  .vn-result p { margin: 8px 0 0; font-size: 15.5px; }
+
+  .vn-check-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 24px 0; }
+  .vn-check-col { border: 1px solid var(--line); border-radius: 18px; background: #fff; padding: 20px 22px; }
+  .vn-check-col h4 { margin: 0 0 12px; font-size: 15px; color: var(--vn-green); }
+  .vn-check-col ul { list-style: none; margin: 0; padding: 0; }
+  .vn-check-col li { position: relative; padding-left: 24px; margin-bottom: 9px; font-size: 14px; line-height: 1.45; color: var(--ink-soft); }
+  .vn-check-col li::before { content: "✓"; position: absolute; left: 0; color: var(--vn-green); font-weight: 700; }
+
+  .vn-ai { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 24px 0; }
+  .vn-ai .c { border: 1px solid var(--line); border-left: 3px solid var(--vn-green); border-radius: 0 16px 16px 0; background: #fff; padding: 20px 22px; }
+  .vn-ai .c b { display: block; margin-bottom: 6px; font-size: 15.5px; }
+  .vn-ai .c span { font-size: 14px; color: var(--ink-soft); line-height: 1.5; }
+
+  .vn-note { font-size: 13.5px; color: var(--muted); border-top: 1px dashed var(--line); padding-top: 16px; margin-top: 32px; line-height: 1.6; }
+  .vn-quote { border-left: 3px solid var(--vn-green); padding: 4px 0 4px 20px; margin: 26px 0; font-family: var(--serif); font-size: 20px; line-height: 1.5; color: var(--ink); }
+  .vn-cta { background: linear-gradient(150deg, #fff, var(--vn-green-soft)); border-radius: 24px; padding: 36px; margin: 20px 0 40px; }
+
+  @media (max-width: 820px) {
+    .vn-facts, .vn-2col, .vn-steps, .vn-money, .vn-ai, .vn-check-cols { grid-template-columns: 1fr; }
+    .vn-fact { border-right: 0; border-bottom: 1px solid var(--line); }
+    .vn-fact:last-child { border-bottom: 0; }
+    .vn-band { padding: 24px 22px; }
+  }
 </style>
 </head>
-<body>
+<body class="vn">
 <a class="skip" href="#main">Перейти к содержанию</a>
 
 <header class="site-header" id="siteHeader">
@@ -73,158 +146,169 @@
   </div>
 </header>
 <main id="main">
-  <div class="wrap"><p style="padding-top:20px"><a class="back-link" href="../cases.html">← Все кейсы</a></p></div>
+  <div class="wrap" style="max-width:980px"><p style="padding-top:20px;margin:0"><a class="back-link" href="../cases.html">← Все кейсы</a></p></div>
 
-  <section class="case-hero">
-    <div class="wrap case-layout">
-      <div class="prose">
-        <div class="eyebrow">Забота о сотрудниках · возвращение из декрета</div>
-        <h1>Встречаем по-нормальному</h1>
-        <p class="case-lead">Все бьются за приём сотрудника: вау-кухни, пять этапов собеседований, мерч. А встречают вернувшегося по принципу «ты же тут работала — сама всё знаешь». Приём — это не финиш, а вход в здание.</p>
+  <section class="vn-hero">
+    <div class="wrap">
+      <div class="vn-eyebrow">Забота о сотрудниках · возвращение из декрета</div>
+      <h1>Все бьются за приём.<br>Никто — за возвращение.</h1>
+      <p class="vn-lead">Вау-кухни, конкурсы на вакансии, пять этапов собеседований, мерч. За <b>вход</b> платят — потому что его видно в отчёте. А человек, который возвращается после декрета, приходит в ту же компанию — и его встречают по принципу «ты же тут работала, сама всё знаешь». <b>Приём — это не финиш, а вход в здание.</b></p>
+      <div class="vn-facts">
+        <div class="vn-fact"><b>~20</b><span>возвращений в год при штате 1000 человек</span></div>
+        <div class="vn-fact hot"><b>≈39 тыс. ₽</b><span>экономия на каждом, кто дошёл до работы</span></div>
+        <div class="vn-fact"><b>0 ₽</b><span>дополнительных затрат — меняются только рамки процесса</span></div>
       </div>
-      <aside class="side">
-        <div class="side-card">
-          <h3>Коротко</h3>
-          <div class="metrics" style="margin-top:0;grid-template-columns:1fr">
-            <div class="metric"><div class="metric-value">~20</div><div class="metric-label">возвращений в год при штате 1000 человек</div></div>
-            <div class="metric"><div class="metric-value">≈39 тыс. ₽</div><div class="metric-label">экономия на одного дошедшего сотрудника</div></div>
-            <div class="metric"><div class="metric-value">6 этапов</div><div class="metric-label">сценарий возвращения + чек-лист наставника</div></div>
-          </div>
-        </div>
-      </aside>
     </div>
   </section>
 
-  <section>
-    <div class="wrap case-layout">
-      <div class="prose">
-        <h2>Проблема: забота заканчивается на «ты же тут работала»</h2>
-        <p>Компании вкладываются во вход — и это логично, потому что за него платят. А потом человек выходит на работу, и его встречают так, будто раз он здесь уже работал, значит сам всё знает.</p>
-        <p>Это слепое пятно. Дальше начинается то, что не видно на картинке вакансии: как человека встретили, что ему объяснили, дали ли почувствовать, что его ждали.</p>
+  <section style="padding-top:44px">
+    <div class="wrap">
+      <div class="vn-body">
 
-        <h2>Пример, который поднимает бренд сильнее любой рекламы</h2>
-        <p>Девушка возвращается после декрета. Она могла быть в штате — а могла прийти «с улицы», впервые, уже с ребёнком. В обоих случаях проблема одна: она не знает, как здесь всё устроено, и боится выглядеть глупо.</p>
-        <p>Мы помогли ей освоиться. Не потому что обязаны — а потому что иначе человек выходит в пустоту и уходит через два месяца.</p>
-        <p class="vn-quote">Заботу легко написать на сайте. Трудно — встретить человека, который полтора года не был в офисе, и сделать так, чтобы он вышел спокойным.</p>
+        <div class="vn-observe">
+          <div class="lbl">Наблюдение, а не тренд</div>
+          <p>Это не вывод из рилсов и не модная тема из соцсетей. Это то, что видно, когда годами работаешь рядом с людьми: одни и те же лица, одни и те же неловкие первые дни, одни и те же «ой, а вы кто?» на входе. Проблема не новая и не громкая — поэтому её и не замечают.</p>
+        </div>
 
-        <h2>Почему это важно бизнесу, а не только «по-человечески»</h2>
-        <p>Работодатель — не институт социальных гарантий, и делать вид, что забота о сотруднике — его прямая обязанность, бессмысленно. Но есть простая связка, которая работает: <b>выгоревший и обиженный сотрудник плохо обслуживает клиента.</b></p>
-        <p>Забота о сотрудниках — это не благотворительность. Это защита клиентского опыта: люди, которых встретили нормально, не уходят в первые два месяца, не выгорают от тревоги и работают ровнее. И это видно клиенту — в тоне, в качестве, в отсутствии «я тут новенькая, не знаю».</p>
+        <div class="vn-band">
+          <div class="vn-eyebrow">Проблема есть — её просто игнорируют</div>
+          <h2>Дать имя и добавить рамки</h2>
+          <p>Решение не требует бюджета, новых людей и полугодового проекта. Нужно всего две вещи: <strong>назвать</strong> ситуацию своим именем и <strong>добавить рамки</strong> в уже существующий процесс адаптации.</p>
+          <p>Нет дополнительных затрат. Но есть ответственность, которую компания берёт на себя: встретить человека нормально и довести его до результата — а не сделать вид, что он сам разберётся.</p>
+        </div>
+
+        <h2>Почему это про клиента, а не «про доброту»</h2>
+        <p>Работодатель — не институт социальных гарантий. Делать вид, что забота о сотруднике — его прямая обязанность, бессмысленно: он считает деньги и ищет выгоду. Это нормально. Но есть связка, которая делает заботу выгодной:</p>
+        <p class="vn-quote">Выгоревший и обиженный сотрудник плохо обслуживает клиента.</p>
+        <p>Человек, который вышел на работу в тревоге и чувствует, что никому не нужен, либо уходит через два месяца, либо остаётся — и работает «на автомате». И то и другое видит клиент: в тоне, в качестве, в фразах «я тут новенькая, не знаю». <strong>Забота о сотрудниках — это защита клиентского опыта.</strong></p>
         <p>Плюс в стране повестка на демографию. Мы не заставим всех рожать — это не наше дело. Но тех, кто даёт новую жизнь, поддержим теми способами, которые у нас есть. И даже если убрать повестку: женщина родила ребёнка, мир вокруг неё изменился. Работа — единственное место, где она снова может почувствовать себя профессионалом. Грех встретить её там холодно.</p>
 
+        <h2>Что происходит на самом деле</h2>
+        <div class="vn-2col">
+          <div class="vn-card bad">
+            <div class="tag">Как обычно</div>
+            <h4>«Вернулась и ладно, че нет-то»</h4>
+            <ul>
+              <li>Встречают как незнакомца: «а вы кто?»</li>
+              <li>Учат по тому же сценарию, что новичков с улицы</li>
+              <li>Дают всё ПО блоком — «изучите 15 систем»</li>
+              <li>Никто не отвечает за выход на показатель</li>
+            </ul>
+          </div>
+          <div class="vn-card good">
+            <div class="tag">Как надо</div>
+            <h4>«Мы тебя ждали» — с первого сообщения</h4>
+            <ul>
+              <li>Отдельный сценарий: статус «из декрета» при оформлении</li>
+              <li>Наставник рядом, наставник отвечает за результат</li>
+              <li>Инструменты — по одному, в момент реальной задачи</li>
+              <li>Финал — не экзамен, а подтверждение нормы</li>
+            </ul>
+          </div>
+        </div>
+        <p>Компания за это время тоже изменилась: другие процессы, другие люди, другие инструменты. И ценности самого человека изменились — за полтора-три года изменилась вся жизнь. Главный страх — не «не справиться», а «показаться дураком в первый же день».</p>
+
         <h2>Ключевой принцип: статус при оформлении</h2>
-        <p>Всех встречают по одному сценарию адаптации. А адаптация нужна разная. Поэтому на этапе оформления нужно сразу ставить статус — как в медицинской карте: от диагноза зависит лечение.</p>
+        <p>Всех встречают по одному сценарию. А адаптация нужна разная. Поэтому на этапе оформления нужно сразу ставить статус — как в медицинской карте: от диагноза зависит лечение.</p>
         <table class="vn-table">
-          <tr><th>Статус</th><th>Что это значит для адаптации</th></tr>
-          <tr><td><b>Из декрета</b></td><td>Пробел в опыте, изменившиеся процессы, страх «я отстала»</td></tr>
-          <tr><td><b>Первое место работы</b></td><td>Нет опыта работы вообще, нужны базовые вещи</td></tr>
-          <tr><td><b>Обычный найм</b></td><td>Есть опыт, нужен продукт и инструменты</td></tr>
+          <thead><tr><th>Статус</th><th>Что это значит для адаптации</th></tr></thead>
+          <tbody>
+            <tr><td><b>Из декрета</b></td><td>Пробел в опыте, изменившиеся процессы, страх «я отстала»</td></tr>
+            <tr><td><b>Первое место работы</b></td><td>Нет опыта работы вообще, нужны базовые вещи</td></tr>
+            <tr><td><b>Обычный найм</b></td><td>Есть опыт, нужен продукт и инструменты</td></tr>
+          </tbody>
         </table>
         <p>Сейчас этого нет почти нигде: всех ведут по одной дороге и удивляются, что кто-то сходит с дистанции.</p>
 
-        <h2>Что ломается у возвращающихся</h2>
-        <ul>
-          <li><b>«Кто я, где я, что я здесь делаю»</b> — человек знает, что надо выйти, но морально не готов.</li>
-          <li><b>Компания изменилась</b> — другие процессы, люди, инструменты.</li>
-          <li><b>Ценности изменились</b> — за полтора-три года изменилась вся жизнь.</li>
-          <li><b>Страх не «не справиться», а «показаться дураком в первый же день».</b></li>
-        </ul>
-        <p>И главное: доверие лояльного сотрудника нужно завоёвывать заново. Это дороже, чем нанять нового, — потому что мы уже знаем, что он приносит пользу.</p>
-
         <h2>Сценарий возвращения: 6 этапов</h2>
         <div class="vn-steps">
-          <div class="vn-step"><div class="n">0</div><div><h4>Первый контакт — «мы тебя ждали»</h4><p>До выхода на работу. Первое, что человек должен увидеть или услышать: его ждут. Даже формальный политес обязателен.</p></div></div>
-          <div class="vn-step"><div class="n">1</div><div><h4>Выяснить намерение, дав варианты</h4><p>Привязать вопрос к сроку: ребёнку скоро полтора года — «рассчитывать на ваш выход?». Показать варианты, включая неполный день. «Мы ждём и будем рады — но это не значит, что мы настаиваем».</p></div></div>
-          <div class="vn-step"><div class="n">2</div><div><h4>Снять страх логистики</h4><p>Где офис, тот же адрес или новый, как доехать, где вход. Человек в стрессе первым делом думает: «меня вообще там помнят?».</p></div></div>
-          <div class="vn-step"><div class="n">3</div><div><h4>Расписать первый день</h4><p>Прямым текстом: подвигов от вас не ждут, возвращаться «как будто не уходила» не требуется. Это проговаривается, чтобы снять тревогу.</p></div></div>
-          <div class="vn-step"><div class="n">4</div><div><h4>Что изменилось, пока её не было</h4><p>Коротко по пунктам: процессы, инструменты, люди. Плюс человеческий посыл: «мы понимаем, что вы теперь мама, и это уважаем». И мелочи: где теперь кухня, где вход.</p></div></div>
-          <div class="vn-step"><div class="n">5</div><div><h4>Переобучение при отсутствии &gt; 3 месяцев</h4><p>3 месяца на своей ставке — в деньгах человек не теряет. Сначала работа с наставником, потом возвращение в свою группу. Наставник отвечает и за вывод на показатель. ПО выдаётся по одному инструменту, в момент первой реальной задачи.</p></div></div>
-          <div class="vn-step"><div class="n">6</div><div><h4>Возврат самостоятельности</h4><p>Работает в своей группе, но с правом на «глупый» вопрос. Финал — не экзамен, а подтверждение: снова тянет норму.</p></div></div>
+          <div class="vn-step"><div class="n">0</div><h4>Первый контакт — «мы тебя ждали»</h4><p>До выхода на работу. Первое, что человек должен услышать: его ждут. Даже формальный политес обязателен.</p></div>
+          <div class="vn-step"><div class="n">1</div><h4>Выяснить намерение, дав варианты</h4><p>Привязать вопрос к сроку: «рассчитывать на ваш выход?». Показать варианты, включая неполный день. «Мы ждём и будем рады — но не настаиваем».</p></div>
+          <div class="vn-step"><div class="n">2</div><h4>Снять страх логистики</h4><p>Где офис, тот же адрес или новый, как доехать, где вход. Человек в стрессе первым делом думает: «меня вообще там помнят?».</p></div>
+          <div class="vn-step"><div class="n">3</div><h4>Расписать первый день</h4><p>Прямым текстом: подвигов не ждут, возвращаться «как будто не уходила» не требуется. Это проговаривается, чтобы снять тревогу.</p></div>
+          <div class="vn-step"><div class="n">4</div><h4>Что изменилось, пока её не было</h4><p>Коротко по пунктам: процессы, инструменты, люди. И мелочи: где теперь кухня, где вход. Плюс человеческий посыл: «мы понимаем, что вы теперь мама».</p></div>
+          <div class="vn-step"><div class="n">5</div><h4>Переобучение при отсутствии &gt; 3 месяцев</h4><p>3 месяца на своей ставке — в деньгах не теряет. Сначала наставник, потом возвращение в группу. ПО — по одному инструменту, в момент задачи.</p></div>
         </div>
+        <p>Финал — не экзамен, а подтверждение: человек снова тянет норму, работает в своей группе, но с правом на «глупый» вопрос.</p>
 
-        <h2>Контекст, в котором это работает</h2>
-        <p>Контакт-центр, 1000 сотрудников, массовая специальность. Обучение и адаптация — 3 месяца, всё это время сотрудник на своей ставке. За это время человек заново знакомится с компанией: продукты, более 15 офисных программ (CRM — самая простая), специализированное ПО под качественные услуги. Гендерный состав 70/30 в пользу женщин, поэтому декрет — не исключение, а регулярный поток: порядка 20 возвращений в год.</p>
+        <h2>Где это работает</h2>
+        <p>Контакт-центр, 1000 сотрудников, массовая специальность. Обучение и адаптация — 3 месяца, всё это время человек на своей ставке. За это время — продукты, более 15 офисных программ (CRM — самая простая), специализированное ПО под качественные услуги. Гендерный состав 70/30 в пользу женщин, поэтому декрет — не исключение, а регулярный поток.</p>
 
-        <h2>Почему это выгодно: расчёт</h2>
-        <p>Мы берём человека, который уже доказал эффективность: ему можно верить, он не уйдёт через два месяца, потому что «не ожидал, что звонков будет столько». И качество у него выше — по мониторингу звонков сотрудники с опытом всегда показывают лучший результат.</p>
-        <table class="vn-table">
-          <tr><th>Параметр</th><th>Значение</th></tr>
-          <tr><td>Ставка новичка</td><td>25–30 тыс. ₽</td></tr>
-          <tr><td>Ставка возвращенца (средняя)</td><td>~37 тыс. ₽ (максимум 45 тыс. с премией)</td></tr>
-          <tr><td>Наставники</td><td>2 на 15 человек</td></tr>
-          <tr><td>Доходят до конца испытательного</td><td>35–40 из 50</td></tr>
-          <tr><td>Возвращений в год</td><td>~20</td></tr>
-        </table>
-        <p><b>Найм с нуля, 3 месяца:</b> ставка 27,5 × 3 = 82,5 тыс. + время наставника ≈ 20 тыс. + найм 30 тыс. ≈ <b>132,5 тыс. ₽</b>.</p>
-        <p><b>Возврат, 3 месяца:</b> ставка 37 × 3 = 111 тыс. + наставник ≈ 20 тыс. + найм 0 ≈ <b>131 тыс. ₽</b>.</p>
-        <p>По «голым» деньгам — паритет. Но считаем ожидаемую стоимость с учётом того, что часть людей не доходит: новичок доходит ~75% → ≈177 тыс. на дошедшего; возвращенец ~95% → ≈138 тыс. <b>Экономия ≈39 тыс. ₽ на человека. При 20 возвращениях в год ≈780 тыс. ₽.</b> И это без учёта качества консультаций и эффекта на удержание новичков.</p>
+        <h2>Почему это выгодно: считаем деньги</h2>
+        <p>Мы берём человека, который уже доказал эффективность: ему можно верить, он не уйдёт через два месяца, потому что «не ожидал, что звонков будет столько». И качество по мониторингу звонков у опытных всегда выше — в высокоточных консультациях это прямое влияние на выручку.</p>
+        <div class="vn-money">
+          <div class="box">
+            <div class="cap">Найм с нуля · 3 месяца</div>
+            <div class="sum">132,5 тыс. ₽</div>
+            <div class="note">ставка + наставник + найм 30 тыс.</div>
+          </div>
+          <div class="box win">
+            <div class="cap">Возврат · 3 месяца</div>
+            <div class="sum">131 тыс. ₽</div>
+            <div class="note">ставка + наставник, найм 0</div>
+          </div>
+        </div>
+        <p>По «голым» деньгам — паритет. Но считаем ожидаемую стоимость с учётом того, что часть людей не доходит: новичок доходит ~75% → ≈177 тыс. на дошедшего; возвращенец ~95% → ≈138 тыс.</p>
+        <div class="vn-result">
+          <div class="big">≈39 тыс. ₽ · ≈780 тыс. ₽ в год</div>
+          <p>Экономия на каждом дошедшем, при 20 возвращениях в год. И это без учёта качества консультаций и эффекта на удержание новичков.</p>
+        </div>
         <p class="vn-quote">Возврат не дешевле обучения с нуля. Он дешевле провала возврата.</p>
-
-        <h2>Эффект, который не считается в таблице</h2>
-        <p>Новый сотрудник видит: женщина ушла в декрет, вернулась — место сохранили, заново учат. Вывод, который он делает про себя: «здесь можно строить». Это работает на удержание всей группы, а не только трёх человек.</p>
+        <p>И эффект, который не считается в таблице: новый сотрудник видит, что женщина ушла в декрет, вернулась — место сохранили, заново учат. Вывод, который он делает про себя: <strong>«здесь можно строить»</strong>. Это работает на удержание всей группы.</p>
 
         <h2>Чек-лист наставника: первые три недели</h2>
-        <h3>Неделя 1 — осмотреться</h3>
-        <ul class="vn-check">
-          <li>Сообщение до выхода: «мы тебя ждали» (за 2 недели)</li>
-          <li>Уточнить формат выхода: полный день / неполный / отсрочка</li>
-          <li>Логистика: адрес, вход, пропуск, парковка</li>
-          <li>Доступы оформлены до первого дня</li>
-          <li>Первый день: встреча лично, не «найдёте сами»</li>
-          <li>Провести по базовому: кухня, туалет, где что</li>
-          <li>Рассказать, что изменилось за время отсутствия</li>
-        </ul>
-        <h3>Неделя 2 — войти в контакт</h3>
-        <ul class="vn-check">
-          <li>Первые задачи под наблюдением, без оценки</li>
-          <li>Разбор одного сложного обращения</li>
-          <li>Выдать 1–2 программы ПО под текущие задачи</li>
-          <li>Проверить, что человек знает, к кому идти с вопросом</li>
-        </ul>
-        <h3>Неделя 3 — почувствовать почву</h3>
-        <ul class="vn-check">
-          <li>Самостоятельные обращения с правом на подсказку</li>
-          <li>Обратная связь по качеству: что уже хорошо</li>
-          <li>Сверить ожидания: что дальше, к какому сроку</li>
-          <li>Спросить прямо: «что тревожит?»</li>
-        </ul>
-        <h3>Далее до 3 месяцев</h3>
-        <ul class="vn-check">
-          <li>Выдать остальные программы — по одной, в момент задачи</li>
-          <li>Вывести на показатель (ответственность наставника)</li>
-          <li>Финал — не экзамен, а подтверждение нормы</li>
-        </ul>
+        <div class="vn-check-cols">
+          <div class="vn-check-col">
+            <h4>Неделя 1 — осмотреться</h4>
+            <ul>
+              <li>Сообщение до выхода (за 2 недели)</li>
+              <li>Уточнить формат выхода</li>
+              <li>Логистика: адрес, вход, пропуск</li>
+              <li>Доступы готовы до первого дня</li>
+              <li>Первый день: встреча лично</li>
+              <li>Провести по базовому</li>
+              <li>Что изменилось за время отсутствия</li>
+            </ul>
+          </div>
+          <div class="vn-check-col">
+            <h4>Неделя 2 — контакт</h4>
+            <ul>
+              <li>Задачи под наблюдением, без оценки</li>
+              <li>Разбор одного сложного обращения</li>
+              <li>1–2 программы ПО под задачи</li>
+              <li>Проверить, к кому идти с вопросом</li>
+            </ul>
+          </div>
+          <div class="vn-check-col">
+            <h4>Неделя 3 — почва</h4>
+            <ul>
+              <li>Самостоятельные обращения</li>
+              <li>ОС по качеству: что уже хорошо</li>
+              <li>Сверить ожидания и сроки</li>
+              <li>Спросить прямо: «что тревожит?»</li>
+              <li>Далее: ПО по одному, вывод на показатель</li>
+            </ul>
+          </div>
+        </div>
 
         <h2>AI-усиление: почему это тиражируется</h2>
-        <p>Системы обучения в компаниях разные: у кого-то LMS, у кого-то Excel и чат в мессенджере. Но блок про возвращающихся настраивается у всех — и именно это делает решение масштабируемым, а не штучным консалтингом.</p>
-        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:22px 0">
-          <div class="callout"><b>Сценарий под компанию.</b> Черновик собирается из описания процессов, оргструктуры и инструментов — не универсальная методичка.</div>
-          <div class="callout"><b>Адаптация под статус.</b> Один модуль переписывается под «из декрета», «первое место работы», «обычный найм».</div>
-          <div class="callout"><b>Обновление без переписывания.</b> Изменился процесс — правится затронутый модуль, а не весь курс.</div>
-          <div class="callout"><b>Письма и напоминания</b> под сроки и ситуацию человека — от «мы тебя ждали» до чек-листа наставника.</div>
+        <p>Системы обучения в компаниях разные: у кого-то LMS, у кого-то Excel и чат. Но блок про возвращающихся настраивается у всех — и именно это делает решение масштабируемым, а не штучным консалтингом.</p>
+        <div class="vn-ai">
+          <div class="c"><b>Сценарий под компанию</b><span>Черновик собирается из описания процессов и инструментов — не универсальная методичка.</span></div>
+          <div class="c"><b>Адаптация под статус</b><span>Один модуль переписывается под «из декрета», «первое место», «обычный найм».</span></div>
+          <div class="c"><b>Обновление без переписывания</b><span>Изменился процесс — правится затронутый модуль, а не весь курс.</span></div>
+          <div class="c"><b>Письма и напоминания</b><span>От «мы тебя ждали» до чек-листа наставника — под сроки и ситуацию.</span></div>
         </div>
 
-        <div class="callout warm" style="margin-top:26px">
-          <b>Допущения.</b> Ставки, наставники, доходимость и число возвращений — данные компании (обезличены). Стоимость закрытия вакансии (~30 тыс. ₽) и доходимость возвращенцев (~95%) — расчётные допущения. Кейс демонстрационный: названия и детали изменены.
+        <p class="vn-note"><b>Допущения.</b> Ставки, наставники, доходимость и число возвращений — данные компании (обезличены). Стоимость закрытия вакансии (~30 тыс. ₽) и доходимость возвращенцев (~95%) — расчётные допущения. Кейс демонстрационный: названия и детали изменены.</p>
+
+        <div class="vn-cta">
+          <div class="vn-eyebrow">Обсудить</div>
+          <h2 style="margin:10px 0 10px">Хотите так же — под свой поток возвращений?</h2>
+          <p style="max-width:56ch">Покажу сценарий, который собрала, и как он ляжет на вашу компанию: с чего начать и что даст быстрый эффект.</p>
+          <p style="margin:0"><a class="btn btn-primary" href="mailto:nsbshal@gmail.com">Написать →</a></p>
         </div>
 
-        <h2>Что усилить дальше</h2>
-        <ul>
-          <li>Собрать статистику по 20 возвращениям за год: сколько дошли, сколько ушли, качество против новичков.</li>
-          <li>Посчитать стоимость ошибки в консультации — тогда «качество выше» станет цифрой.</li>
-          <li>Проверить доходимость возвращенцев: если она близка к 95%, расчёт станет железным.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap">
-      <div class="callout" style="border-radius:22px;background:linear-gradient(150deg,#fff,#eef3ec);padding:32px">
-        <div class="eyebrow">Обсудить</div>
-        <h2 style="margin-top:8px">Хотите так же — под свой поток возвращений?</h2>
-        <p style="color:var(--ink-soft);max-width:60ch">Покажу сценарий, который собрала, и как он ляжет на вашу компанию: с чего начать, что даст быстрый эффект.</p>
-        <p><a class="btn btn-primary" href="mailto:nsbshal@gmail.com">Написать →</a></p>
       </div>
     </div>
   </section>
