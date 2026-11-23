@@ -1145,4 +1145,15 @@ p { text-wrap: pretty; }
 .chip-ai { background: #fdeee8; color: #b34a2c; border-color: #f4cdbd; }
 .case-visual--ritm { display: flex; align-items: center; justify-content: center; background: linear-gradient(150deg, #a8b89a 0%, #e8c9c1 100%); aspect-ratio: 4 / 3; }
 .case-visual--ritm span { font-family: var(--serif); font-size: clamp(28px, 4vw, 44px); letter-spacing: .18em; color: #fffdf9; text-shadow: 0 2px 18px rgba(0,0,0,.12); }
+.case-visual--hr-brand { display: flex; align-items: center; justify-content: center; background: linear-gradient(150deg, #13503f 0%, #2e7a66 58%, #d9ebe2 100%); }
+.case-visual--hr-brand span { font-family: var(--display); font-weight: 800; font-size: clamp(20px, 2.6vw, 32px); letter-spacing: .14em; text-transform: uppercase; color: #fffdf9; text-shadow: 0 2px 18px rgba(0,0,0,.16); text-align: center; padding: 0 20px; }
+.case-visual--mandatory { display: flex; align-items: center; justify-content: center; background: linear-gradient(150deg, #ff5a36 0%, #b34a2c 58%, #f6e4d8 100%); }
+.case-visual--mandatory span { font-family: var(--display); font-weight: 800; font-size: clamp(20px, 2.6vw, 32px); letter-spacing: .14em; text-transform: uppercase; color: #fffdf9; text-shadow: 0 2px 18px rgba(0,0,0,.16); text-align: center; padding: 0 20px; }
 @media (max-width: 900px) { .case-ai-grid { grid-template-columns: 1fr; } }
+
+/* site-v2: "что говорит против" — скромный блок контраргументов */
+.case-against { border-left: 3px solid var(--line); background: #fbfaf6; padding: 18px 22px; border-radius: 0 12px 12px 0; margin: 34px 0 0; }
+.case-against h2 { font-family: var(--sans); font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin: 0 0 12px; }
+.case-against ul { margin: 0; padding-left: 20px; color: var(--muted); font-size: 14.5px; }
+.case-against li { margin-bottom: 9px; }
+.case-against li:last-child { margin-bottom: 0; }
