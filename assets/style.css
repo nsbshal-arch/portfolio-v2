@@ -391,6 +391,7 @@ section { padding: 72px 0; }
 }
 .callout b { color: var(--ink); }
 .callout.warm { border-color: var(--warm); background: var(--warm-soft); }
+.callout.info { border-color: #5b86b3; background: #e9f2fa; }
 
 .side { position: sticky; top: 92px; display: grid; gap: 16px; }
 .side-card { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 20px; }
