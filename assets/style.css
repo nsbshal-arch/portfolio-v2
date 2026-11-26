@@ -356,6 +356,12 @@ section { padding: 72px 0; }
 .case-hero h1 { font-size: clamp(30px, 4vw, 46px); margin-top: 18px; max-width: 22ch; }
 .h1-caps { text-transform: uppercase; letter-spacing: .02em; color: var(--accent); }
 .case-hero .case-lead { margin-top: 18px; font-size: 18px; color: var(--ink-soft); max-width: 62ch; }
+.case-ai-chip { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 18px 0 0; padding: 10px 16px; border: 1px solid rgba(31,90,76,.28); border-radius: 999px; background: var(--accent-soft); font-size: 14px; color: #254b41; }
+.case-ai-chip .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex: none; }
+.case-ai-chip b { color: var(--ink); }
+.case-ai-chip a { color: var(--accent); font-weight: 600; text-decoration: none; white-space: nowrap; }
+.case-ai-chip a:hover { text-decoration: underline; }
+@media (max-width: 620px) { .case-ai-chip { border-radius: 16px; } }
 .case-facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; margin-top: 34px; }
 .case-fact { background: var(--paper); padding: 18px; }
 .case-fact dt { font-size: 11.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
@@ -552,6 +558,8 @@ section { padding: 72px 0; }
 .manifest-grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: 40px; align-items: start; margin-bottom: 44px; }
 .manifest-text p { margin: 0 0 16px; color: var(--ink-soft); }
 .manifest-text .lead { font-size: 20px; color: var(--ink); }
+.manifest-text b, .brand-callout b { color: var(--ink); }
+.about-note { margin: 0; font-size: 14.5px; color: var(--muted); max-width: 80ch; }
 .brand-callout { background: linear-gradient(150deg, #fff, #f0ece2); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow); }
 .brand-callout h3 { font-size: 24px; margin: 6px 0 12px; }
 .brand-callout p { font-size: 14.5px; color: var(--ink-soft); margin: 0 0 12px; }
